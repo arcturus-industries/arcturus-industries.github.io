@@ -2,7 +2,7 @@ html {
   /*min-height: 100vh;*/
   height: 100%;
   /* debug */
-  background-color: coral;
+  background-color: #202020;
 }
 
 body {
@@ -54,6 +54,12 @@ a:hover {
   /*border: 1px solid white;*/
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(200, 200, 200, 0), rgba(200, 200, 200, 0.75), rgba(200, 200, 200, 0));
+}
+
 #logo {
   font-size: 150px;
   padding: 10px;
@@ -68,9 +74,10 @@ a:hover {
 
 #info {
   width: 500px;
-  font-size: 25px;
+  font-size: 18px;
   padding: 10px;
   padding-left: 100px;
+  font-family: "Open Sans";
   /* debug */
   /*border: 2px solid green;*/
 }
@@ -78,6 +85,7 @@ a:hover {
 #footer {
   padding-bottom: 100px;
   font-size: 16px;
+  font-family: "Open Sans";
   /* debug */
   /*border: 1px solid blue;*/
 }
