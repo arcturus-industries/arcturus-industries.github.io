@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jobs on Arcturus Industries</title>
+    <link>https://arcturus.industries/jobs/</link>
+    <description>Recent content in Jobs on Arcturus Industries</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://arcturus.industries/jobs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Senior Computer Vision / SLAM Engineer in AR/VR</title>
+      <link>https://arcturus.industries/jobs/cv-engineer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/jobs/cv-engineer/</guid>
+      <description>We are looking for passionate, self-driven, talented computer vision engineers / researchers to help us bring AR/VR perception (tracking, mapping, and beyond) to the next-level.</description>
+    </item>
+    
+    <item>
+      <title>Senior Software Engineer in Mobile AR/VR (ARM/DSP/GPU)</title>
+      <link>https://arcturus.industries/jobs/software-engineer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/jobs/software-engineer/</guid>
+      <description>We are looking for a passionate, talented software engineer to help us bring AR/VR perception (tracking, mapping, and beyond) to the next-level.</description>
+    </item>
+    
+  </channel>
+</rss>

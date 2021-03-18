@@ -1,39 +1,589 @@
-<!doctype html>
-
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="en-us">
 <head>
-  <meta charset="utf-8">
-  <title>Arcturus Industries</title>
-  <meta name="description" content="We're about to make waves in AR/VR perception.">
-  <link rel="icon" href="favicon-32.png" sizes="32x32">
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+	<meta charset="utf-8">
+	<title>Arcturus Industries</title>
+
+	<!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="A team that thinks in pixels, fights for milliseconds, and builds realtime 3D perception systems for AR/VR">
+	
+	<meta name="author" content="Themefisher">
+	<meta name="generator" content="Hugo 0.81.0" />
+
+	<!-- plugins -->
+	
+	<link rel="stylesheet" href="https://arcturus.industries/plugins/bootstrap/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="https://arcturus.industries/plugins/themify-icons/themify-icons.css">
+	
+	<link rel="stylesheet" href="https://arcturus.industries/plugins/magnific-popup/magnific-popup.css">
+	
+	<link rel="stylesheet" href="https://arcturus.industries/plugins/slick/slick.css">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%7cM&#43;PLUS&#43;1p%7cDosis%7cPlay%7cJura%7cQuattrocento&#43;Sans:400,700&amp;display=swap">
+	
+
+	<!-- Main Stylesheet -->
+	
+	<link rel="stylesheet" href="https://arcturus.industries/css/style.min.css" media="screen">
+
+	<!-- Custom stylesheet - for your changes -->
+	
+  <link rel="stylesheet" href="https://arcturus.industries/css/custom.min.css" media="screen">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="https://arcturus.industries/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="https://arcturus.industries/images/favicon.png" type="image/x-icon">
+
+	
+
 </head>
 
-<body>
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="55">
   <div id="content">
-    <div id="banner">
-      <div id="flex-container">
-        <!-- <div id="logo">&Lambda;I</div> -->
-        <div id="logo"><img src="img/logo.png" width="150"></div>
-        <div id="info">
-          <h2>We're Arcturus Industries.</h2>
+    
 
-          <p>A small team that thinks in pixels, fights for milliseconds, and built realtime 3D perception tech at <a href="https://occipital.com">Occipital</a>.</p>
 
-          <hr/>
-          <!--<img src="img/roomview3d.jpg" width="500"/>-->
-          <p><b>June 19, 2020:</b> We're excited to announce that we're working with <a href="https://www.valvesoftware.com">Valve Software</a>, at the intersection of computer vision and VR. Our first feature, <a href="https://steamcommunity.com/games/250820/announcements/detail/2471861771402099478">"Room View 3D"</a> ships as part of SteamVR 1.13 for everyone with a Valve Index headset.</p>
+<section class="sticky-top navigation">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<a class="navbar-brand p-0" href="/">
+				
+				<img class="lozad" data-src="https://arcturus.industries/images/logo.png" alt="Arcturus Industries" height="42">
+				
+			</a>
 
-          <hr/>
+			<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-          <p>A lot more is on the way. <a href="https://forms.gle/ZEFudZhcn74zWMf59">Sign up</a> for updates!</p>
-        </div>
-      </div>
+			<div class="collapse navbar-collapse" id="navigation">
+				<ul class="navbar-nav ml-auto">
+					
+					<li class="nav-item">
+            <a class="nav-link" style="color:white" href="https://arcturus.industries#services">Tech</a>
+					</li>
+					
+					<li class="nav-item">
+            <a class="nav-link" style="color:white" href="https://arcturus.industries/jobs_sub/">Jobs</a>
+					</li>
+					
+					<li class="nav-item">
+            <a class="nav-link" style="color:white" href="https://arcturus.industries#blog">Blog</a>
+					</li>
+					
+					<li class="nav-item">
+            <a class="nav-link" style="color:white" href="https://arcturus.industries#contact">Sign up</a>
+					</li>
+					
+					<li class="nav-item">
+            <a class="nav-link" style="color:white" href="https://arcturus.industries"></a>
+					</li>
+					
+				</ul>
+				
+			</div>
+		</nav>
+	</div>
+</section>
+
+
+
+
+
+
+<!-- Welcome Slider-->
+<section class="hero-area", id="hero-area">
+
+	<canvas class="scene", id="scene"></canvas>
+	<script type="x-shader/x-vertex" id="wrapVertexShader">
+		attribute float size;
+		attribute vec3 color;
+		varying vec3 vColor;
+		void main() {
+			vColor = color;
+			vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+			gl_PointSize = size * ( 350.0 / - mvPosition.z );
+			gl_Position = projectionMatrix * mvPosition;
+		}
+	</script>
+	<script type="x-shader/x-fragment" id="wrapFragmentShader">
+		varying vec3 vColor;
+		uniform sampler2D texture1;
+		void main(){
+			vec4 textureColor = texture2D( texture1, gl_PointCoord );
+			if ( !(textureColor.a > 0.3) ) discard;
+			vec4 color = vec4(vColor.xyz, 1.0) * textureColor;
+			gl_FragColor = color;
+		}
+	</script>
+	
+	<script type="module" src="plugins/three/three.module.js"></script>
+	<script src="plugins/three/three.min.js"></script>
+	<script src="js/external/TweenMax.min.js"></script>
+	<script src="js/animation-bg.js"></script>
+
+	<div class="content">
+		<div class="block">
+			<h1>Λrcturus Ιndustries</h1>
+			<h2>A team that thinks in pixels, fights for milliseconds, and builds realtime 3D perception systems</h2>
+		</div>
+	</div>
+	 
+</section>
+
+<!-- /Welcome Slider-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- service -->
+<section id="services" class="bg-one section">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-10">
+				<!-- section title -->
+				<div class="title text-center wow fadeIn" data-wow-duration="500ms">
+					<h2> Our <span class="color">
+						  Tech </span></h2>
+					<div class="border-meghna"></div>
+				</div>
+			</div>
+			<!-- /section title -->
+
+			
+			<!-- Single Service Item -->
+
+
+
+
+			<div class="col-lg-4 col-md-6 col-12 mb-3 wow fadeInDown" data-wow-duration="500ms">
+        		<div class="team-member">
+          			<div class="member-photo">
+
+						
+						<a href="blog/slam/" target="_blank">
+							<div class="video" href="blog/slam/" target="_blank">
+								<video class="lozad" muted loop style="height:100%;width:100%">
+									<source data-src='https://arcturus.industries/images/backgrounds/tracking.mov' type="video/mp4">
+								</video> 
+							</div>
+						</a>
+						
+            		
+
+
+            			<div class="service-block text-center">
+							<div class="service-icon text-center">
+								<a href="blog/slam/" target="_blank"><i class="ti-location-pin"></i></a>
+							</div>
+							<h3><a href="blog/slam/" target="_blank">VR/AR Tracking</a></h3>
+							<p>6 DOF inside-out positional tracking for AR/VR applications. We provide an accurate and robust tracking experience by fusing visual and inertial information</p>
+					</div>
+
+         		 </div>
+
+          			<!-- member name & designation -->
+        		
+        		</div>
+      		</div>
+
+			<!-- End Single Service Item -->
+			
+			<!-- Single Service Item -->
+
+
+
+
+			<div class="col-lg-4 col-md-6 col-12 mb-3 wow fadeInDown" data-wow-duration="500ms">
+        		<div class="team-member">
+          			<div class="member-photo">
+
+						
+						<a href="https://store.steampowered.com/news/app/250820/view/2471861771402099477" target="_blank">
+							<div class="video" href="https://store.steampowered.com/news/app/250820/view/2471861771402099477" target="_blank">
+								<video class="lozad" muted loop style="height:100%;width:100%">
+									<source data-src='https://arcturus.industries/images/backgrounds/passthrough.mov' type="video/mp4">
+								</video> 
+							</div>
+						</a>
+						
+            		
+
+
+            			<div class="service-block text-center">
+							<div class="service-icon text-center">
+								<a href="https://store.steampowered.com/news/app/250820/view/2471861771402099477" target="_blank"><i class="ti-eye"></i></a>
+							</div>
+							<h3><a href="https://store.steampowered.com/news/app/250820/view/2471861771402099477" target="_blank">View Synthesis</a></h3>
+							<p>We unlocked the possibility to see your surrounding environement in real-time and in 3D without removing your headset</p>
+					</div>
+
+         		 </div>
+
+          			<!-- member name & designation -->
+        		
+        		</div>
+      		</div>
+
+			<!-- End Single Service Item -->
+			
+			<!-- Single Service Item -->
+
+
+
+
+			<div class="col-lg-4 col-md-6 col-12 mb-3 wow fadeInDown" data-wow-duration="500ms">
+        		<div class="team-member">
+          			<div class="member-photo">
+
+						
+						<a href="https://twitter.com/jrpowers/status/1366423230047784965?s=20" target="_blank">
+							<div class="video" href="https://twitter.com/jrpowers/status/1366423230047784965?s=20" target="_blank">
+								<video class="lozad" muted loop style="height:100%;width:100%">
+									<source data-src='https://arcturus.industries/images/backgrounds/synthetic_simulation.mov' type="video/mp4">
+								</video> 
+							</div>
+						</a>
+						
+            		
+
+
+            			<div class="service-block text-center">
+							<div class="service-icon text-center">
+								<a href="https://twitter.com/jrpowers/status/1366423230047784965?s=20" target="_blank"><i class="ti-video-camera"></i></a>
+							</div>
+							<h3><a href="https://twitter.com/jrpowers/status/1366423230047784965?s=20" target="_blank">Dataset Simulation</a></h3>
+							<p>To test our algorithms faster and with perfect ground-truth, we developed a pipeline to generate simulated dataset from real trajectories and environments</p>
+					</div>
+
+         		 </div>
+
+          			<!-- member name & designation -->
+        		
+        		</div>
+      		</div>
+
+			<!-- End Single Service Item -->
+			
+		</div>
+	</div>
+</section>
+<!-- /service -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start Counter Section -->
+<section id="counter" class="parallax-section bg-1 section overly" style='background-image: url("https://arcturus.industries/images/backgrounds/sky_4.webp")'>
+	
+	<img class="lozad" style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(https:\/\/arcturus.industries\/images\/backgrounds\/sky_4.jpg)'" data-src="https://arcturus.industries/images/backgrounds/sky_4.webp" />
+	<div class="container">
+		<div class="row justify-content-center">
+			
+			<div class="col-lg-3 col-md-6 col-12 text-center wow fadeInDown" data-wow-duration="500ms">
+				<div class="counters-item">
+					<i class="ti-face-smile"></i>
+					<span class="count" data-count="15">0</span>
+					<h3>Team Members</h3>
+				</div>
+			</div>
+			
+			<div class="col-lg-3 col-md-6 col-12 text-center wow fadeInDown" data-wow-duration="500ms">
+				<div class="counters-item">
+					<i class="ti-mouse"></i>
+					<span class="count" data-count="1028113">0</span>
+					<h3>Lines of Code</h3>
+				</div>
+			</div>
+			
+			<div class="col-lg-3 col-md-6 col-12 text-center wow fadeInDown" data-wow-duration="500ms">
+				<div class="counters-item">
+					<i class="ti-world"></i>
+					<span class="count" data-count="6">0</span>
+					<h3>Nationalities</h3>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<!-- /Counter Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start Blog Section -->
+<section id="blog" class="section">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-12">
+				<!-- section title -->
+				<div class="title text-center wow fadeInDown">
+					<h2>  Latest <span class="color">
+							 Posts  </span></h2>
+					<div class="border-meghna"></div>
+				</div>
+			</div>
+			<!-- /section title -->
+
+			
+			<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
+  <div class="post-block">
+    <div class="media-wrapper">
+      <a href="https://arcturus.industries/blog/welcome/" target="_blank">
+      <img class="img-fluid lozad" data-src="https://arcturus.industries" onerror="this.onerror=null;this.src='https:\/\/arcturus.industries\/images\/blog\/ai-team-2021.jpg'">
+    </a>
+    </div>
+
+    <br>
+    <div class="content">
+      <h3><a href="https://arcturus.industries/blog/welcome/">Welcome to Arcturus</a></h3>
+      <p>Welcome to Arcturus Industries. Here on our blog, we will share more on our team, our tech, what we are currently building, and opportunities to join us.</p>
+      <a class="btn btn-transparent" href="https://arcturus.industries/blog/welcome/">Read more</a>
     </div>
   </div>
-  <div id="footer"><center><a href="jobs.html">We're hiring</a> SLAM, Deep Learning, and optimization wizards for AR/VR. <br/>Come join us, especially in Madrid and Seattle.</center></div>
+</article>
+
+			
+			<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
+  <div class="post-block">
+    <div class="media-wrapper">
+      <a href="https://arcturus.industries/blog/roomview3d/" target="_blank">
+      <img class="img-fluid lozad" data-src="https://arcturus.industries/images/backgrounds/tracking.webp" onerror="this.onerror=null;this.src='https:\/\/arcturus.industries\/images\/backgrounds\/roomview3d.png'">
+    </a>
+    </div>
+
+    <br>
+    <div class="content">
+      <h3><a href="https://arcturus.industries/blog/roomview3d/">Announcing Room View 3D</a></h3>
+      <p>Today we&rsquo;re excited to announce that we&rsquo;re working with Valve Software (creators of Half Life, Steam, and the Index HMD).</p>
+      <a class="btn btn-transparent" href="https://arcturus.industries/blog/roomview3d/">Read more</a>
+    </div>
+  </div>
+</article>
+
+			
+
+			<div class="all-post text-center col-lg-12">
+				<a class="btn btn-main" href="https://arcturus.industries/blog">View All Posts</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /blog -->
+
+
+
+
+
+
+<!-- Start Contact Us -->
+<section id="contact" class="contact-us section-bg">
+	<div class="container pb-5">
+		<div class="row">
+			<div class="col-lg-12">
+				<!-- section title -->
+				<div class="title text-center wow fadeIn" data-wow-duration="500ms">
+					<h2> Sign <span class="color">
+							  up </span></h2>
+					<div class="border-meghna"></div>
+				</div>
+			</div>
+			<!-- /section title -->
+		</div>
+
+		<div class="content-center">
+			<h4> We have a lot more on the way.</h4>
+			<h4><span class="popup" onclick="subscribe()">Sign up</span> for updates.</h4>
+		</div>
+	</div>
+</section>
+
+
+<script src="plugins/vex/js/vex.combined.min.js"></script>
+<script>vex.defaultOptions.className = 'vex-theme-wireframe'</script>
+<link rel="stylesheet" type="text/css" href="plugins/vex/css/vex-theme-wireframe.css">
+<link rel="stylesheet" type="text/css" href="plugins/vex/css/vex.css">
+<script>
+function hide (elements) {
+elements = elements.length ? elements : [elements];
+for (var index = 0; index < elements.length; index++) {
+	elements[index].style.display = 'none';
+}
+}
+
+function subscribe() {
+	var vexId = vex.dialog.open({
+	input: [
+	" <b style='color:#ac1122;''>Sign up </b> and we'll notify you when we have <b>big things to share. </b>",
+	 "<br> We will never spam you.",
+		'<style>',
+            '.vex-custom-field-wrapper {',
+                'margin: 1em 0;',
+            '}',
+            '.vex-custom-field-wrapper > label {',
+                'display: inline-block;',
+                'margin-bottom: .2em;',
+            '}',
+        '</style>',
+		'<div class="vex-custom-field-wrapper">',
+            '<div class="vex-custom-input-wrapper">',
+		'<input name="name" type="text" placeholder="Your name" required />',
+		'<input name="email" type="email" placeholder="Your email" required />',
+			'</div>',
+        '</div>',
+		'<div class="vex-custom-field-wrapper">',
+            '<div class="vex-custom-input-wrapper">',
+		'<input name="message" type="text" placeholder="What do you hope we are building?" required />',
+		'</div>',
+        '</div>',
+		
+	].join(''),
+	buttons: [
+		$.extend({}, vex.dialog.buttons.YES, { text: 'Subscribe' }),
+		$.extend({}, vex.dialog.buttons.NO, { text: 'Back' })
+	],
+	callback: function (data) {
+		if (!data) {
+				}
+				else {
+
+			var message = data.message;
+			var name = data.name;
+			var email = data.email;
+			$.ajax({
+				url: "https://formspree.io/f/meqpygwg", 
+				method: "POST",
+				data: {message: message, name: name, email: email},
+				dataType: "json"
+			});
+			alert('Thanks for the email, we\'ll be in touch promptly.');
+			return false;
+		}
+		
+		hide(document.querySelectorAll('.vex'));
+	},
+	});
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+  </div><!-- end Contact Area -->
+<footer id="footer" class="section-bg">
+	<div class="container">
+		<div class="row wow fadeInUp" data-wow-duration="500ms">
+			<div class="col-xl-12">
+
+				<!-- Footer Locations -->
+				<div class="location">
+					Hiring in Seattle, Madrid, and remote.
+				</div>
+
+				<!-- Footer Social Links -->
+				<div class="social-icon">
+					<ul class="list-inline">
+						
+						<li class="list-inline-item"><a href="https://twitter.com/arcturusvision"><i class="ti-twitter-alt"></i></a></li>
+						
+						<li class="list-inline-item"><a href="https://www.linkedin.com/company/arcturus-industries/"><i class="ti-linkedin"></i></a></li>
+						
+						<li class="list-inline-item"><a href="https://github.com/arcturus-industries"><i class="ti-github"></i></a></li>
+						
+					</ul>
+				</div>
+
+				<!-- copyright -->
+				<div class="copyright text-center">
+					<a href="https://arcturus.industries/">
+						<img src="https://arcturus.industries/images/logo.png" alt="Arcturus Industries" height="42" />
+					</a>
+					<br>
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- /footer -->
+
+<!-- Google Map API -->
+
+
+<!-- JS Plugins -->
+
+<script src="https://arcturus.industries/plugins/jquery/jquery.min.js"></script>
+
+<script src="https://arcturus.industries/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://arcturus.industries/plugins/slick/slick.min.js"></script>
+
+<script src="https://arcturus.industries/plugins/shuffle/shuffle.min.js"></script>
+
+<script src="https://arcturus.industries/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<script src="https://arcturus.industries/plugins/lazy-load/lozad.min.js"></script>
+
+<script src="https://arcturus.industries/plugins/google-map/map.js"></script>
+
+<script src="https://arcturus.industries/plugins/three/three.js"></script>
+
+
+<!-- Main Script -->
+
+<script src="https://arcturus.industries/js/script.min.3ad022e4aaacdd86f83e2ab1e90cc2ec06ca1b8f0b5771942a02acb2a4b929558517f34587f593472b0155030686dcf2.js" integrity="sha384-OtAi5Kqs3Yb4Piqx6QzC7AbKG48LV3GUKgKssqS5KVWFF/NFh/WTRysBVQMGhtzy"></script>
+
+
 </body>
 
 </html>

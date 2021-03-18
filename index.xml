@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arcturus Industries</title>
+    <link>https://arcturus.industries/</link>
+    <description>Recent content on Arcturus Industries</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Mar 2021 12:52:36 +0600</lastBuildDate><atom:link href="https://arcturus.industries/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Our Team</title>
+      <link>https://arcturus.industries/jobs_sub/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/jobs_sub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Welcome to Arcturus</title>
+      <link>https://arcturus.industries/blog/welcome/</link>
+      <pubDate>Wed, 17 Mar 2021 12:52:36 +0600</pubDate>
+      
+      <guid>https://arcturus.industries/blog/welcome/</guid>
+      <description>Welcome to Arcturus Industries. Here on our blog, we will share more on our team, our tech, what we are currently building, and opportunities to join us.</description>
+    </item>
+    
+    <item>
+      <title>Announcing Room View 3D</title>
+      <link>https://arcturus.industries/blog/roomview3d/</link>
+      <pubDate>Fri, 19 Jun 2020 12:00:00 -0800</pubDate>
+      
+      <guid>https://arcturus.industries/blog/roomview3d/</guid>
+      <description>Today we&amp;rsquo;re excited to announce that we&amp;rsquo;re working with Valve Software (creators of Half Life, Steam, and the Index HMD).</description>
+    </item>
+    
+    <item>
+      <title>Why using SLAM for Virtual Reality?</title>
+      <link>https://arcturus.industries/blog-drafts/slam/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>https://arcturus.industries/blog-drafts/slam/</guid>
+      <description>Virtual Reality (VR) is a computer-generated environment that the user perceives through a device known as a headset and where the user can interact with the virtual environment using controllers.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://arcturus.industries/team_sub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/team_sub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>John Doe</title>
+      <link>https://arcturus.industries/author/john-doe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/author/john-doe/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue. Duis auctor lacus id vehicula gravida.</description>
+    </item>
+    
+    <item>
+      <title>Mark Dinn</title>
+      <link>https://arcturus.industries/author/mark-dinn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/author/mark-dinn/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue. Duis auctor lacus id vehicula gravida.</description>
+    </item>
+    
+    <item>
+      <title>Maud Buffier</title>
+      <link>https://arcturus.industries/author/maud-buffier/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/author/maud-buffier/</guid>
+      <description>Maud is French.</description>
+    </item>
+    
+    <item>
+      <title>Senior Computer Vision / SLAM Engineer in AR/VR</title>
+      <link>https://arcturus.industries/jobs/cv-engineer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/jobs/cv-engineer/</guid>
+      <description>We are looking for passionate, self-driven, talented computer vision engineers / researchers to help us bring AR/VR perception (tracking, mapping, and beyond) to the next-level.</description>
+    </item>
+    
+    <item>
+      <title>Senior Software Engineer in Mobile AR/VR (ARM/DSP/GPU)</title>
+      <link>https://arcturus.industries/jobs/software-engineer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/jobs/software-engineer/</guid>
+      <description>We are looking for a passionate, talented software engineer to help us bring AR/VR perception (tracking, mapping, and beyond) to the next-level.</description>
+    </item>
+    
+  </channel>
+</rss>
