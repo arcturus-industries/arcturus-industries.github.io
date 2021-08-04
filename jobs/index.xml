@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://arcturus.industries/jobs/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Real-time 3D Perception Deep Learning Engineer</title>
+      <link>https://arcturus.industries/jobs/dl-engineer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/jobs/dl-engineer/</guid>
+      <description>We are looking for passionate, self-driven and talented engineers to improve 3D awareness in Augmented and Virtual Reality (AR/VR) to the next level.</description>
+    </item>
+    
+    <item>
       <title>Senior Computer Vision / SLAM Engineer in AR/VR</title>
       <link>https://arcturus.industries/jobs/cv-engineer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -25,7 +34,7 @@
     </item>
     
     <item>
-      <title>Software Engineer in Test</title>
+      <title>Software Engineer in SLAM Evaluation for AR/VR</title>
       <link>https://arcturus.industries/jobs/test-engineer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
