@@ -17,21 +17,12 @@
     </item>
     
     <item>
-      <title>DIPr Challenge</title>
+      <title>Deep Inertial Prediction Challenge</title>
       <link>https://arcturus.industries/blog/diprchallenge/</link>
       <pubDate>Thu, 27 Jan 2022 12:00:00 +0000</pubDate>
       
       <guid>https://arcturus.industries/blog/diprchallenge/</guid>
-      <description>The DIPr challenge is a competition focused on improving short lasting IMU fallback tracking for VR systems.</description>
-    </item>
-    
-    <item>
-      <title>The basics of Virtual Reality</title>
-      <link>https://arcturus.industries/blog/vrintroduction/</link>
-      <pubDate>Wed, 17 Mar 2021 12:52:36 +0600</pubDate>
-      
-      <guid>https://arcturus.industries/blog/vrintroduction/</guid>
-      <description>The basics of Virtual Reality You have heard about virtual reality but never really understood how it works?</description>
+      <description>The Deep Inertial Prediction (DIPr) challenge is a competition focused on improving short lasting IMU fallback tracking for VR systems.</description>
     </item>
     
     <item>
@@ -59,6 +50,15 @@
       
       <guid>https://arcturus.industries/blog-drafts/slam/</guid>
       <description>Virtual Reality (VR) is a computer-generated environment that the user perceives through a device known as a headset and where the user can interact with the virtual environment using controllers.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://arcturus.industries/blog/vrintroduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/blog/vrintroduction/</guid>
+      <description>Once you are wearing the headset, your head motion is tracked and the virtual world is reprojected onto the headset display.</description>
     </item>
     
     <item>
