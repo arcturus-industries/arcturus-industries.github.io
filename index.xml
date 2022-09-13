@@ -6,7 +6,7 @@
     <description>Recent content on Arcturus Industries</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Mar 2021 12:52:36 +0600</lastBuildDate><atom:link href="https://arcturus.industries/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Jan 2022 12:00:00 +0000</lastBuildDate><atom:link href="https://arcturus.industries/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Our Team</title>
       <link>https://arcturus.industries/jobs_sub/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://arcturus.industries/jobs_sub/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Inertial Prediction Challenge</title>
+      <link>https://arcturus.industries/blog/diprchallenge/</link>
+      <pubDate>Thu, 27 Jan 2022 12:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/blog/diprchallenge/</guid>
+      <description>The Deep Inertial Prediction (DIPr) challenge is a competition focused on improving short lasting IMU fallback tracking for VR systems.</description>
     </item>
     
     <item>
@@ -41,6 +50,15 @@
       
       <guid>https://arcturus.industries/blog-drafts/slam/</guid>
       <description>Virtual Reality (VR) is a computer-generated environment that the user perceives through a device known as a headset and where the user can interact with the virtual environment using controllers.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://arcturus.industries/blog/vrintroduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/blog/vrintroduction/</guid>
+      <description>Once you are wearing the headset, your head motion is tracked and the virtual world is reprojected onto the headset display.</description>
     </item>
     
     <item>

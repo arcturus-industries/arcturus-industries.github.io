@@ -6,7 +6,16 @@
     <description>Recent content in Blogs on Arcturus Industries</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Mar 2021 12:52:36 +0600</lastBuildDate><atom:link href="https://arcturus.industries/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Jan 2022 12:00:00 +0000</lastBuildDate><atom:link href="https://arcturus.industries/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deep Inertial Prediction Challenge</title>
+      <link>https://arcturus.industries/blog/diprchallenge/</link>
+      <pubDate>Thu, 27 Jan 2022 12:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/blog/diprchallenge/</guid>
+      <description>The Deep Inertial Prediction (DIPr) challenge is a competition focused on improving short lasting IMU fallback tracking for VR systems.</description>
+    </item>
+    
     <item>
       <title>Welcome to Arcturus</title>
       <link>https://arcturus.industries/blog/welcome/</link>
@@ -23,6 +32,15 @@
       
       <guid>https://arcturus.industries/blog/roomview3d/</guid>
       <description>Today we&amp;rsquo;re excited to announce that we&amp;rsquo;re working with Valve Software (creators of Half Life, Steam, and the Index HMD).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://arcturus.industries/blog/vrintroduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arcturus.industries/blog/vrintroduction/</guid>
+      <description>Once you are wearing the headset, your head motion is tracked and the virtual world is reprojected onto the headset display.</description>
     </item>
     
   </channel>
