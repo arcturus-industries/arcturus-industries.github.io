@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8">
 	<title></title>
 
@@ -9,32 +9,32 @@
 	<meta name="description" content="A team that thinks in pixels, fights for milliseconds, and builds realtime 3D perception systems for AR/VR">
 	
 	<meta name="author" content="Themefisher">
-	<meta name="generator" content="Hugo 0.92.0" />
+	<meta name="generator" content="Hugo 0.152.2">
 
 	<!-- plugins -->
 	
-	<link rel="stylesheet" href="https://arcturus.industries/plugins/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="http://arcturus.industries/plugins/bootstrap/bootstrap.min.css">
 	
-	<link rel="stylesheet" href="https://arcturus.industries/plugins/themify-icons/themify-icons.css">
+	<link rel="stylesheet" href="http://arcturus.industries/plugins/themify-icons/themify-icons.css">
 	
-	<link rel="stylesheet" href="https://arcturus.industries/plugins/magnific-popup/magnific-popup.css">
+	<link rel="stylesheet" href="http://arcturus.industries/plugins/magnific-popup/magnific-popup.css">
 	
-	<link rel="stylesheet" href="https://arcturus.industries/plugins/slick/slick.css">
+	<link rel="stylesheet" href="http://arcturus.industries/plugins/slick/slick.css">
 	
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%7cM&#43;PLUS&#43;1p%7cDosis%7cPlay%7cJura%7cQuattrocento&#43;Sans:400,700&amp;display=swap">
 	
 
 	<!-- Main Stylesheet -->
 	
-	<link rel="stylesheet" href="https://arcturus.industries/css/style.min.css" media="screen">
+	<link rel="stylesheet" href="http://arcturus.industries/css/style.min.css" media="screen">
 
 	<!-- Custom stylesheet - for your changes -->
 	
-  <link rel="stylesheet" href="https://arcturus.industries/css/custom.min.css" media="screen">
+  <link rel="stylesheet" href="http://arcturus.industries/css/custom.min.css" media="screen">
 
 	<!--Favicon-->
-	<link rel="shortcut icon" href="https://arcturus.industries/images/favicon.png" type="image/x-icon">
-	<link rel="icon" href="https://arcturus.industries/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="http://arcturus.industries/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="http://arcturus.industries/images/favicon.png" type="image/x-icon">
 
 	
 
@@ -53,7 +53,7 @@
 				
 				
 				<picture class="lozad"  data-alt="">
-					<img src="https://arcturus.industries/images/logo.png"  height="42">
+					<img src="http://arcturus.industries/images/logo.png"  height="42">
 				</picture>
 
 
@@ -68,23 +68,23 @@
 				<ul class="navbar-nav ml-auto">
 					
 					<li class="nav-item">
-            <a class="nav-link" style="color:white" href="https://arcturus.industries#services">Tech</a>
+            <a class="nav-link" style="color:white" href="http://arcturus.industries/#services">Tech</a>
 					</li>
 					
 					<li class="nav-item">
-            <a class="nav-link" style="color:white" href="https://arcturus.industries/jobs_sub/">Jobs</a>
+            <a class="nav-link" style="color:white" href="http://arcturus.industries/jobs_sub/">Jobs</a>
 					</li>
 					
 					<li class="nav-item">
-            <a class="nav-link" style="color:white" href="https://arcturus.industries#blog">Blog</a>
+            <a class="nav-link" style="color:white" href="http://arcturus.industries/#blog">Blog</a>
 					</li>
 					
 					<li class="nav-item">
-            <a class="nav-link" style="color:white" href="https://arcturus.industries#contact">Sign up</a>
+            <a class="nav-link" style="color:white" href="http://arcturus.industries/#contact">Sign up</a>
 					</li>
 					
 					<li class="nav-item">
-            <a class="nav-link" style="color:white" href="https://arcturus.industries"></a>
+            <a class="nav-link" style="color:white" href="http://arcturus.industries/"></a>
 					</li>
 					
 				</ul>
@@ -112,7 +112,42 @@
       </div>
       <div class="col-lg-8 offset-lg-2">
         <div class="post-single-content">
-          
+          <!-- ---
+title: "The basics of Virtual Reality"
+date: 2021-03-17T12:52:36+06:00
+image: images/blog/index_headset.png
+author: Martin Brossard, Maud Buffier
+description : "An introduction to VR technology"
+---
+
+
+## The basics of Virtual Reality
+
+You have heard about virtual reality but never really understood how it works? Then, read on to get a better understanding of the technological breakthroughs behind virtual reality and the next steps to make it even better. 
+
+### How does the user perceive the virtual environment ? 
+
+Virtual Reality (VR) is a computer-generated environment that you see through a device called headset and that you interact with using controllers. This visual, auditory and haptic setup makes you feel immersed in the virtual world rendered by the computer into your headset. Virtual reality can serve many applications like gaming, culture, education or architecture.
+
+
+<!-- ![index](/images/blog/index_headset.png) -->
+<img src="/images/blog/index_headset.png" alt="index" style="margin:10px; max-width:700px" class="center"/>
+<p>Once you are wearing the headset, your head motion is tracked and the virtual world is reprojected onto the headset display. It means that if you rotate left, you will see the left part of the virtual environment. By looking up, you will see the top part rendered. Moreover, the display is divided into 2 screens, one per eye. This dual screen creates a stereoscopic effect which makes you perceive the world in 3D. If you think about it, your eyes do the same trick : two 2D images create a 3D effect as it make you perceive depth.</p>
+<!-- ![vrscreens](/images/blog/vr_screens.png) -->
+<img alt="vrscreens" src="/images/blog/vr_screens.png"  style="margin:10px; max-width:700px" class="center"/>
+<h3 id="headset-tracking">Headset tracking</h3>
+<p>As we saw, tracking the user’s headset position as precisely as possible is crucial to render the virtual scene accordingly and make VR an immersive experience. As you can see below, any error in tracking will modify the content rendered to the user and impacts the experience.</p>
+<!-- ![trackingerror](/images/blog/tracking_error.png) -->
+<img alt="trackingerror" src="/images/blog/trackingAcuracy.jpg"  style="margin:10px; max-width:700px" class="center"/>
+<p>Nowadays, the VR market is booming and is demanding for systems that are affordable, require little or no setup and minimise VR side effects occurring due to bad tracking. Among those side effects, motion sickness, which consists of a dizziness induced by a mismatch between the real and virtual trajectories.</p>
+<h3 id="lighthouse-technology">Lighthouse technology</h3>
+<p>The most stable solution today is based on the “lighthouse” technology produced by Valve. It enables room scale tracking using external time-of-flight sensors, called base stations. Those base stations sweep the room with multiple synchronous pulses and laser lines looking for photo-diodes embedded on the headset and the controllers. By keeping careful track of the timings between pulses and sweeps, the tracking system can infer the position of each element at any time. The headset and controllers are further equipped with an Inertial Measurement Unit (IMU), whose measurements are fused with the base station data. This solution provides accurate tracked poses at 1000 Hz and is sometimes called “external tracking.”</p>
+<!-- ![steamvr](/images/blog/steamvr.png) -->
+<img alt="trackingerror" src="/images/blog/steamvr.png"  style="margin:10px; max-width:700px" class="center"/>
+<p>External tracking requires the user to solidly mount the base stations on a tripod, furniture or walls. It is crucial to maintain them static all the time to avoid jitter. Moreover, the room must be completely covered by the base station sweeps. If the headset is occluded from the base station, tracking is lost and the system does not compute position until tracking recovery, when the headset is back in view. In addition to being complicated to set up, this approach is costly to manufacture.</p>
+<h3 id="next-gen-headsets">Next gen headsets</h3>
+<p>The breakthroughs in computer vision in the past few years have led to another solution where tracking is provided using cameras mounted on the headset. But that will be for another article .. Stay tuned. &ndash;&gt;</p>
+
         </div>
 
         
@@ -155,8 +190,8 @@
 
 				<!-- copyright -->
 				<div class="copyright text-center">
-					<a href="https://arcturus.industries/">
-						<img src="https://arcturus.industries/images/logo.png" alt="Arcturus Industries" height="42" />
+					<a href="http://arcturus.industries/">
+						<img src="http://arcturus.industries/images/logo.png" alt="Arcturus Industries" height="42" />
 					</a>
 					<br>
 					<p></p>
@@ -172,26 +207,26 @@
 
 <!-- JS Plugins -->
 
-<script src="https://arcturus.industries/plugins/jquery/jquery.min.js"></script>
+<script src="http://arcturus.industries/plugins/jquery/jquery.min.js"></script>
 
-<script src="https://arcturus.industries/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="http://arcturus.industries/plugins/bootstrap/bootstrap.min.js"></script>
 
-<script src="https://arcturus.industries/plugins/slick/slick.min.js"></script>
+<script src="http://arcturus.industries/plugins/slick/slick.min.js"></script>
 
-<script src="https://arcturus.industries/plugins/shuffle/shuffle.min.js"></script>
+<script src="http://arcturus.industries/plugins/shuffle/shuffle.min.js"></script>
 
-<script src="https://arcturus.industries/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="http://arcturus.industries/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-<script src="https://arcturus.industries/plugins/lazy-load/lozad.min.js"></script>
+<script src="http://arcturus.industries/plugins/lazy-load/lozad.min.js"></script>
 
-<script src="https://arcturus.industries/plugins/google-map/map.js"></script>
+<script src="http://arcturus.industries/plugins/google-map/map.js"></script>
 
-<script src="https://arcturus.industries/plugins/three/three.js"></script>
+<script src="http://arcturus.industries/plugins/three/three.js"></script>
 
 
 <!-- Main Script -->
 
-<script src="https://arcturus.industries/js/script.min.3ad022e4aaacdd86f83e2ab1e90cc2ec06ca1b8f0b5771942a02acb2a4b929558517f34587f593472b0155030686dcf2.js" integrity="sha384-OtAi5Kqs3Yb4Piqx6QzC7AbKG48LV3GUKgKssqS5KVWFF/NFh/WTRysBVQMGhtzy"></script>
+<script src="http://arcturus.industries/js/script.min.c5d39255b0de1417aa2199a831ccd297e48312e72f4e18d819cd457171f3fefbd053a607595ab71deaea7a6d785977ea.js" integrity="sha384-xdOSVbDeFBeqIZmoMczSl&#43;SDEucvThjYGc1FcXHz/vvQU6YHWVq3Herqem14WXfq"></script>
 
 
 </body>

@@ -4,7 +4,8 @@
     <title>Tags on Arcturus Industries</title>
     <link>https://arcturus.industries/tags/</link>
     <description>Recent content in Tags on Arcturus Industries</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://arcturus.industries/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://arcturus.industries/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
